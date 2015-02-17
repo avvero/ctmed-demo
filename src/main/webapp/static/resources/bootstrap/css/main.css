@@ -1,0 +1,42 @@
+.glyphicon-type_folder {
+    cursor: pointer;
+}
+.glyphicon-type_folder:before {
+    content: "\e118";
+}
+.glyphicon-type_file:before {
+    content: "\e022";
+}
+.glyphicon-type_image:before {
+    content: "\e060";
+}
+.glyphicon-type_archive:before {
+    content: "\e181";
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.breadcrumb_sm {
+    padding: 8px 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.breadcrumb_sm > li {
+    display: inline-block;
+}
+
+.breadcrumb_sm > li + li:before {
+    padding: 0 5px;
+    color: #cccccc;
+    content: "/\00a0";
+}
+
+.breadcrumb_sm > .active {
+    color: #999999;
+}
