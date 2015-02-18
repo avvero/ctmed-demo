@@ -1,5 +1,7 @@
 package com.springapp.mvc;
 
+import com.languagebox.services.DocumentService;
+import com.languagebox.services.TemplateService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -28,6 +30,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/bootstrap/**").addResourceLocations("/static/resources/bootstrap/");
         registry.addResourceHandler("/**").addResourceLocations("/static/resources/");
         registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+        registry.addResourceHandler("/client/**").addResourceLocations("/static/client/");
     }
 
     @Override
@@ -47,5 +50,16 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+
+    @Bean
+    public TemplateService getTemplateService() {
+        return new TemplateService();
+    }
+
+    @Bean
+    public DocumentService getDocumentService() {
+        return new DocumentService();
+    }
+
 
 }

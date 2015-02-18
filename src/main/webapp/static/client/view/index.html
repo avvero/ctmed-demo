@@ -3,43 +3,78 @@
         <title>project2</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/bootstrap/css/docs.min.css" rel="stylesheet">
         <link href="/bootstrap/css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="/bootstrap/css/datetimepicker.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
 
+        <script src="/js/lib/jquery-1.11.0.js"></script>
+        <script src="/js/lib/jquery-ui-1.10.4.js"></script>
+        <script src="/js/lib/jquery.colorbox.js"></script>
+        <script src="/js/lib/jquery.gritter.min.js"></script>
+
+        <script src="/js/lib/angular.js"></script>
+        <script src="/js/lib/angular-animate.js"></script>
+        <script src="/js/lib/angular-sanitize.js"></script>
+        <script src="/js/lib/angular-route.js"></script>
+        <script src="/js/lib/angular-ui-router.js"></script>
+        <script src="/js/lib/moment.min.js"></script>
+        <script src="/js/lib/ui-bootstrap-tpls-0.11.0.js"></script>
+
+
+        <script src="/client/js/main.js"></script>
+        <script src="/client/js/templatesController.js"></script>
+        <script src="/client/js/templateController.js"></script>
+        <script src="/client/js/documentsController.js"></script>
+        <script src="/client/js/documentController.js"></script>
+
+
+
     </head>
     <body data-feedly-mini="yes">
+        <div ng-app="clientApp" ng-controller="mainClientController">
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">{{app.name}}</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Главная</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">project #2</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Главная</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
+            <div class="container">
+
+                <div class="row">
+                    <div class="span12 ui-view-container">
+                        <div ui-view="single" autoscroll="false" style="padding: 5px"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div ui-view="left" autoscroll="false"></div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div ui-view="right" autoscroll="false"></div>
+                    </div>
+                </div>
+
+            </div> <!-- /container -->
+
+            <div id="feedly-mini" title="feedly Mini tookit"></div>
         </div>
-    </nav>
-
-    <div class="container">
-
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
-
-    </div> <!-- /container -->
-
-    <div id="feedly-mini" title="feedly Mini tookit"></div></body>
+    </body>
 </html>

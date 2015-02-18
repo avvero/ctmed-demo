@@ -1,0 +1,44 @@
+package com.languagebox.domain;
+
+/**
+ * Created by avvero on 18.02.15.
+ */
+public class Template {
+
+    private int id;
+    private String name;
+    private String description;
+    private String view;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
+    }
+}

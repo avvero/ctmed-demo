@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>project2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body data-feedly-mini="yes">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3"></div>
+        <div class="col-xs-6 col-sm-6">
+            <h2 id="forms-help-text">Доступные формы документов</h2>
+            <div class="bs-callout bs-callout-info" id="callout-help-text-accessibility" ng-repeat="template in templates">
+                <h4><a ng-href="#/template/{{template.id}}/document">{{template.name}}</a></h4>
+                <p>{{template.description}}</p>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3"></div>
+    </div>
+</body>
+</html>
