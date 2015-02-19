@@ -1,0 +1,8 @@
+table.sgreen tr:hover {
+    background-color: #dff0d8;
+    /*cursor: pointer;*/
+}
+
+.full_width {
+    width: 100%;
+}

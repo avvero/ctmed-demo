@@ -35,7 +35,14 @@ public class ViewController {
         return "static/client/view/index.html";
     }
 
-    @RequestMapping(value = "/view/{templateId}", method = RequestMethod.GET, produces = "text/html")
+    /**
+     * Получение VIEW для шаблонов документов
+     * @param templateId
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/view/{templateId}", method = RequestMethod.GET,
+            produces = "text/html; charset=UTF-8")
     public @ResponseBody Object pages(@PathVariable int templateId, ModelMap model) {
         Template template = templateService.getById(templateId);
         return template.getView();

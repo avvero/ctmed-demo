@@ -4,21 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body data-feedly-mini="yes">
-<table class="table">
+<table class="table sgreen">
     <thead>
         <tr>
             <th>#</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
+            <th>Место приема</th>
+            <th>Дата и время приема</th>
+            <th>Больной ФИО</th>
+            <th>Врач ФИО</th>
         </tr>
     </thead>
     <tbody>
-        <tr class="active">
-            <th scope="row">1</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
+        <tr ng-repeat="document in documents">
+            <th scope="row">
+                <a ng-href="#/template/{{template.id}}/document/{{document.id}}">#{{document.id}}</a>
+            </th>
+            <td>{{document.reception.place}}</td>
+            <td>{{document.reception.time}}</td>
+            <td>{{document.patient.name}}</td>
+            <td>{{document.doctor.name}}</td>
         </tr>
     </tbody>
 </table>

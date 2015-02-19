@@ -22,22 +22,26 @@ public class DataController {
     @Autowired
     private DocumentService documentService;
 
-    @RequestMapping(value = "/data/template", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/data/template", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
     public @ResponseBody Object getAllTemplates() {
         return templateService.getAll();
     }
 
-    @RequestMapping(value = "/data/template/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/data/template/{id}", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
     public @ResponseBody Object getTemplate(@PathVariable int id) {
         return templateService.getById(id);
     }
 
-    @RequestMapping(value = "/data/template/{id}/document", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/data/template/{id}/document", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
     public @ResponseBody Object getTemplateDocuments(@PathVariable int id) {
         return documentService.getAllByTemplateId(id);
     }
 
-    @RequestMapping(value = "/data/template/{templateId}/document/{documentId}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/data/template/{templateId}/document/{documentId}", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
     public @ResponseBody Object getTemplateDocuments(@PathVariable int templateId, @PathVariable int documentId) {
         return documentService.getById(documentId);
     }
