@@ -2,10 +2,10 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'war'
 
-group = 'com.languagebox'
-version = '1.0.1.0-SNAPSHOT'
+group = 'project2'
+version = '0.1.0.0-SNAPSHOT'
 
-description = """language_box"""
+description = """project2"""
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
