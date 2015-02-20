@@ -101,7 +101,7 @@ clientApp.config(function ($routeProvider, $stateProvider, $urlRouterProvider) {
             views: {
                 "nested_single": {
                     templateUrl: function ($stateParams){
-                        return '/view/' + $stateParams.documentId;
+                        return '/view/' + $stateParams.id;
                     },
                     controller: 'documentController',
                     resolve: documentController.resolve

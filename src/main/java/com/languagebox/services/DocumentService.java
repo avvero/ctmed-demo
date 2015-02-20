@@ -11,8 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class DocumentService {
 
+    public static final String DATA_FILE = "documents.json";
+
     public JSONArray getAll() {
-        String s = CommonUtils.getStringFromResourceFile("documents.json");
+        String s = CommonUtils.getStringFromResourceFile(DATA_FILE);
 
         JSONArray documents = new JSONArray(s);
         return documents;
@@ -30,8 +32,16 @@ public class DocumentService {
         return result.toString();
     }
 
+    public String getByIdOrStub(int documentId) {
+        return documentId == 0 ? getStub(documentId) : getById(documentId);
+    }
+
     public String getById(int documentId) {
         JSONArray documents = getAll();
+        return getById(documentId, documents);
+    }
+
+    public String getById(int documentId, JSONArray documents) {
         for (int i = 0; i < documents.length(); i++) {
             JSONObject object = documents.getJSONObject(i);
             if (object.has("id") && object.getInt("id") == documentId) {
@@ -39,5 +49,42 @@ public class DocumentService {
             }
         }
         return null;
+    }
+
+    public String saveOrUpdate(int templateId, Integer documentId, String documentString) {
+        JSONArray documents = getAll();
+        JSONObject documentJson = new JSONObject(documentString);
+        if (documentId.intValue() == 0) {
+            documentJson.put("id", getNextId(documents));
+            documents.put(documentJson);
+            CommonUtils.saveStringToResourceFile(DATA_FILE, documents.toString());
+        }
+        for (int i = 0; i < documents.length(); i++) {
+            JSONObject object = documents.getJSONObject(i);
+            if (object.has("id") && object.getInt("id") == documentId) {
+                documents.remove(i);
+                documents.put(documentJson);
+                CommonUtils.saveStringToResourceFile(DATA_FILE, documents.toString());
+                break;
+            }
+        }
+        return documentJson.toString();
+    }
+
+    public Integer getNextId(JSONArray documents) {
+        int max = 0;
+        for (int i = 0; i < documents.length(); i++) {
+            JSONObject object = documents.getJSONObject(i);
+            if (object.has("id") && object.getInt("id") > max) {
+                max = object.getInt("id");
+            }
+        }
+        return ++max;
+    }
+
+    public String getStub(int documentId) {
+        String s = CommonUtils.getStringFromResourceFile("stub.json");
+        JSONArray documents = new JSONArray(s);
+        return getById(documentId, documents);
     }
 }

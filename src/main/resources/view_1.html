@@ -1,6 +1,21 @@
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body data-feedly-mini="yes">DOCUMENT!!!!</body>
-</html>
+<h2 id="forms-help-text">{{template.name}} #{{document.id}}</h2>
+
+<form class="form">
+    <div class="form-group">
+        <label for="document.reception.place">Больной осмотрен непосредственно при поступлении в</label>
+        <input type="text" class="form-control" id="document.reception.place" ng-model="document.reception.place">
+    </div>
+    <div class="form-group">
+        <label for="document.reception.time">Дата и время</label>
+        <input type="datetime" class="form-control" id="document.reception.time" ng-model="document.reception.time">
+    </div>
+    <div class="form-group">
+        <label for="document.patient.name">Больной (ФИО)</label>
+        <input type="text" class="form-control" id="document.patient.name" ng-model="document.patient.name">
+    </div>
+    <div class="form-group">
+        <label for="document.doctor.name">Больного принял врач-невролог (ФИО)</label>
+        <input type="text" class="form-control" id="document.doctor.name" ng-model="document.doctor.name">
+    </div>
+    <a class="btn btn-primary" role="button" ng-click="update(document)">Сохранить</a>
+</form>

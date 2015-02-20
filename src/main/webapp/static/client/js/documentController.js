@@ -1,7 +1,21 @@
-function documentController($scope, model, $location, sharedProperties, $stateParams, $window) {
+function documentController($scope, model, $location, sharedProperties, $http, $window) {
     $scope.$location = $location;
     $scope.sharedProperties = sharedProperties;
     $scope.document = model;
+    $scope.update = function(document) {
+        $http({
+            url: '/data/template/'+document.templateId+'/document/'+document.id,
+            method: "POST",
+            data: document,
+            headers: {'Content-Type': 'application/json;charset=UTF-8'}
+        }).success(function (data) {
+            $scope.document = data
+            // Обновим файлы
+        }).error(function (data, status) {
+            $scope.sharedProperties.error(data.message, "Ошибка сохранения документа '" + document.id + "'", data)
+        });
+        $scope.sharedProperties.success("Сохранение документа...")
+    }
 
 }
 

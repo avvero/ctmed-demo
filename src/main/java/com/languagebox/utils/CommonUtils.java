@@ -1,5 +1,6 @@
 package com.languagebox.utils;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
@@ -21,6 +22,16 @@ public class CommonUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String saveStringToResourceFile(String fileName, String string) {
+        try {
+            Resource resource = new ClassPathResource(fileName);
+            FileUtils.writeStringToFile(resource.getFile(), string, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return string;
     }
 
 }

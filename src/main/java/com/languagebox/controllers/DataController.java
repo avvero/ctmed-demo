@@ -5,10 +5,7 @@ import com.languagebox.services.TemplateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by avvero on 18.02.15.
@@ -42,8 +39,22 @@ public class DataController {
 
     @RequestMapping(value = "/data/template/{templateId}/document/{documentId}", method = RequestMethod.GET,
             produces = "application/json;charset=UTF-8")
-    public @ResponseBody Object getTemplateDocuments(@PathVariable int templateId, @PathVariable int documentId) {
-        return documentService.getById(documentId);
+    public @ResponseBody Object getTemplateDocument(@PathVariable int templateId, @PathVariable int documentId) {
+        return documentService.getByIdOrStub(documentId);
+    }
+
+
+    @RequestMapping(value = "/data/template/{templateId}/document", method = RequestMethod.POST,
+            produces = "application/json;charset=UTF-8")
+    public @ResponseBody Object saveTemplateDocuments(@PathVariable int templateId, @RequestBody String documentString) {
+        return saveTemplateDocument(templateId, null, documentString);
+    }
+
+    @RequestMapping(value = "/data/template/{templateId}/document/{documentId}", method = RequestMethod.POST,
+            produces = "application/json;charset=UTF-8")
+    public @ResponseBody Object saveTemplateDocument(@PathVariable int templateId, @PathVariable Integer documentId,
+                                                     @RequestBody String documentString) {
+        return documentService.saveOrUpdate(templateId, documentId, documentString);
     }
 
 
