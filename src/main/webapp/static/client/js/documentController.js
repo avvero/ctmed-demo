@@ -1,4 +1,4 @@
-function documentController($scope, model, $location, sharedProperties, $http, $window) {
+function documentController($scope, model, $location, sharedProperties, $http, $modal) {
     $scope.$location = $location;
     $scope.sharedProperties = sharedProperties;
     $scope.document = model;

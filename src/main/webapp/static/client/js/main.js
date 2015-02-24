@@ -3,7 +3,8 @@ var clientApp = angular.module('clientApp', [
         'ngRoute',
         'ui.router',
         'ngAnimate',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'dictionary'
     ])
     .service('sharedProperties', function ($modal) {
         var notifications = []

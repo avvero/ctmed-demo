@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import com.languagebox.services.DictionaryService;
 import com.languagebox.services.DocumentService;
 import com.languagebox.services.TemplateService;
 import org.springframework.context.annotation.Bean;
@@ -59,6 +60,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public DocumentService getDocumentService() {
         return new DocumentService();
+    }
+
+    @Bean
+    public DictionaryService getDictionaryService() {
+        return new DictionaryService();
     }
 
 
