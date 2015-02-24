@@ -12,11 +12,11 @@
     <div class="form-group">
         <label for="document.patient.name">Больной (ФИО)</label>
         <input type="text" class="form-control" id="document.patient.name" ng-model="document.patient.name" readonly="true">
-        <button class="btn btn-default" dictionary="patients" target="document.patient">Выбрать</button>
+        <button class="btn btn-default" dictionary="patients" target="document" field="patient">Выбрать</button>
     </div>
     <div class="form-group ">
         <label for="document.doctor.name">Больного принял врач-невролог (ФИО)</label>
         <input type="text" class="form-control" id="document.doctor.name" ng-model="document.doctor.name">
     </div>
-    <a class="btn btn-primary" role="button" ng-click="update(document)" ng-disabled="form.$pristine">Сохранить</a>
+    <a class="btn btn-primary" role="button" ng-click="update(document)">Сохранить</a>
 </form>
