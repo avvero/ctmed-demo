@@ -17,6 +17,16 @@ public class DictionaryService {
                 JSONArray patients = new JSONArray(s);
                 return patients;
             }
+            case "doctors": {
+                String s = CommonUtils.getStringFromResourceFile("doctors.json");
+                JSONArray patients = new JSONArray(s);
+                return patients;
+            }
+            case "clinics": {
+                String s = CommonUtils.getStringFromResourceFile("clinics.json");
+                JSONArray patients = new JSONArray(s);
+                return patients;
+            }
         }
         return null;
     }

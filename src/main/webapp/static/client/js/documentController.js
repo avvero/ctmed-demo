@@ -9,7 +9,7 @@ function documentController($scope, model, $location, sharedProperties, $http, $
             data: document,
             headers: {'Content-Type': 'application/json;charset=UTF-8'}
         }).success(function (data) {
-            $scope.document = data
+            $scope.document.id = data.id
             // Обновим файлы
         }).error(function (data, status) {
             $scope.sharedProperties.error(data.message, "Ошибка сохранения документа '" + document.id + "'", data)

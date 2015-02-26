@@ -1,1 +1,82 @@
-[{"templateId":1,"id":1,"reception":{"time":"12.02.2015 12:12","place":"Больница 2"},"patient":{"name":"Иванов Сергей Сергеевич"},"doctor":{"name":"Петров Петр Петрович1"}}]
+[
+    {
+        "reception": {
+            "time": "12:02",
+            "clinic": {
+                "id": 2,
+                "name": "Больница 2"
+            },
+            "date": "2015-02-26"
+        },
+        "templateId": 1,
+        "id": 1,
+        "hospitalization": {
+            "chanel": "Внутрибольничный инстульт",
+            "illness_start_fix_person": "witness",
+            "ambulance_delivery_time": "01:12",
+            "escort": "Сопровождение",
+            "delay_reason": "задержки госпитализации",
+            "illness_term_hours": 1,
+            "complaints": "ываыва",
+            "ambulance_arrival_time": "01:10",
+            "history": "ываыва",
+            "blood_pressure": 123,
+            "illness_start_fix_witness": "ывываыва",
+            "onmk_reason": "задержки госпитализации",
+            "ambulance_call_time": "10:10",
+            "delivered_from": "Откуда доставлен",
+            "illness_term_days": 1
+        },
+        "patient": {
+            "name": "Иванов Сергей Сергеевич"
+        },
+        "life_history": {
+            "education_level": "высший",
+            "family_onmk": "0",
+            "common": "Анамнез жизни"
+        },
+        "therapy": {
+            "antianginal": {
+                "is_has": "0"
+            },
+            "disaggregants": {
+                "is_has": "0"
+            },
+            "antihypertensive": {
+                "is_has": "0"
+            }
+        },
+        "diseases": {
+            "ulcer_disease": {
+                "is_has": "0"
+            },
+            "arrhythmia": {
+                "is_has": "0"
+            },
+            "varicose": {
+                "is_has": "0"
+            },
+            "diabetes": {
+                "is_has": "0"
+            },
+            "asthma": {
+                "is_has": "0"
+            },
+            "piks": {
+                "is_has": "0"
+            },
+            "hypertonic_disease": {
+                "is_controlled": "0",
+                "regular_blood_pressure": 123,
+                "is_has": "1",
+                "max_blood_pressure": 123
+            },
+            "atherosclerosis": {
+                "is_has": "0"
+            }
+        },
+        "doctor": {
+            "name": "Петров Петр Петрович1"
+        }
+    }
+]

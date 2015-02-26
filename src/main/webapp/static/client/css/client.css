@@ -6,3 +6,11 @@ table.sgreen tr:hover {
 .full_width {
     width: 100%;
 }
+
+.modal-lg {
+    width: 900px;
+}
+
+table.selectable tr {
+    cursor: pointer;
+}
