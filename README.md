@@ -35,7 +35,6 @@
 - /js/lib/jquery-ui-1.10.4.js
 - /js/lib/jquery.colorbox.js
 - /js/lib/jquery.gritter.min.js
-
 - /js/lib/angular.js
 - /js/lib/angular-animate.js
 - /js/lib/angular-sanitize.js
@@ -48,7 +47,6 @@
 # Оwn JS
 - /client/js/dictionary.js
 - /client/js/dictionaryController.js
-
 - /client/js/main.js
 - /client/js/templatesController.js
 - /client/js/templateController.js
