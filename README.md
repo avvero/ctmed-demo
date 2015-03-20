@@ -1,6 +1,6 @@
 ### project2
 
-Приложение состоит услов из двух частей:
+Приложение состоит условно из двух частей:
 
 * STUB Backend
 * JS/HTML frontend client
@@ -55,7 +55,7 @@
 
 ## Шаблоны форм
 - /client/view/templates.html - список шаблонов документов
-- /client/view/template.html - шаблок документа
+- /client/view/template.html - шаблон документа
 - /client/view/documents.html - список документов шаблона
 - /view/*{documentId}*, где {documentId} - id соответствующего типа документов.
 - /client/view/dictionary_{dictionaryName}.html, где {dictionaryName} - имя словаря
