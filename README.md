@@ -29,78 +29,50 @@
 /client/css/client.css
         
 # Vendor JS
-https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+- https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+- /bootstrap/js/bootstrap.min.js
+- /js/lib/jquery-1.11.0.js
+- /js/lib/jquery-ui-1.10.4.js
+- /js/lib/jquery.colorbox.js
+- /js/lib/jquery.gritter.min.js
 
-/bootstrap/js/bootstrap.min.js
-
-/js/lib/jquery-1.11.0.js
-
-/js/lib/jquery-ui-1.10.4.js
-
-/js/lib/jquery.colorbox.js
-
-/js/lib/jquery.gritter.min.js
-
-
-/js/lib/angular.js
-
-/js/lib/angular-animate.js
-
-/js/lib/angular-sanitize.js
-
-/js/lib/angular-route.js
-
-/js/lib/angular-ui-router.js
-
-/js/lib/moment.min.js
-
-/js/lib/ui-bootstrap-tpls-0.11.0.js
+- /js/lib/angular.js
+- /js/lib/angular-animate.js
+- /js/lib/angular-sanitize.js
+- /js/lib/angular-route.js
+- /js/lib/angular-ui-router.js
+- /js/lib/moment.min.js
+- /js/lib/ui-bootstrap-tpls-0.11.0.js
 
 
 # Оwn JS
-/client/js/dictionary.js
+- /client/js/dictionary.js
+- /client/js/dictionaryController.js
 
-/client/js/dictionaryController.js
-
-
-/client/js/main.js
-
-/client/js/templatesController.js
-
-/client/js/templateController.js
-
-/client/js/documentsController.js
-
-/client/js/documentController.js
-
+- /client/js/main.js
+- /client/js/templatesController.js
+- /client/js/templateController.js
+- /client/js/documentsController.js
+- /client/js/documentController.js
 
 ## Шаблоны форм
-/client/view/templates.html - список шаблонов документов
-
-/client/view/template.html - шаблок документа
-
-/client/view/documents.html - список документов шаблона
-
-/view/*{documentId}*, где {documentId} - id соответствующего типа документов.
-
-/client/view/dictionary_{dictionaryName}.html, где {dictionaryName} - имя словаря
+- /client/view/templates.html - список шаблонов документов
+- /client/view/template.html - шаблок документа
+- /client/view/documents.html - список документов шаблона
+- /view/*{documentId}*, где {documentId} - id соответствующего типа документов.
+- /client/view/dictionary_{dictionaryName}.html, где {dictionaryName} - имя словаря
 
 
 ## Data API
 Data API STUB Backend должен обеспечить вывод данных в JSON формате на стандартный REST запрос
 
 #Документы, шаблоны
-*GET* /data/template - список шаблонов
-
-*GET* /data/template/{id} - шаблон с ID = {id}
-
-*GET* /data/template/{id}/document - список документов шаблона с ID = {id}
-
-*GET* /data/template/{templateId}/document/{documentId} - документ с ID = {documentId} шаблона с ID = {id}
-
-*POST* /data/template/{templateId}/document - сохраняем *новый* документ шаблона с ID = {id}
-
-*POST* /data/template/{templateId}/document/{documentId} - обновляем документ с ID = {documentId} шаблона с ID = {id}
+- *GET* /data/template - список шаблонов
+- *GET* /data/template/{id} - шаблон с ID = {id}
+- *GET* /data/template/{id}/document - список документов шаблона с ID = {id}
+- *GET* /data/template/{templateId}/document/{documentId} - документ с ID = {documentId} шаблона с ID = {id}
+- *POST* /data/template/{templateId}/document - сохраняем *новый* документ шаблона с ID = {id}
+- *POST* /data/template/{templateId}/document/{documentId} - обновляем документ с ID = {documentId} шаблона с ID = {id}
 
 
 #Справочники
