@@ -29,17 +29,17 @@ public class TemplateService {
     public List<Template> getAll() {
         List<Template> templates = new ArrayList<Template>();
         Template template = new Template();
-        template.setName("История болезни");
-        template.setDescription("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.");
+        template.setName("\u041e\u041d\u041c\u041a");
+        template.setDescription("\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0448\u0430\u0431\u043b\u043e\u043d\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430");
         template.setView(getView());
         template.setId(1);
         templates.add(template);
 
-        template = new Template();
-        template.setName("Карточка пациента");
-        template.setDescription("Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.");
-        template.setId(2);
-        templates.add(template);
+        // template = new Template();
+        // template.setName("Карточка пациента");
+        // template.setDescription("Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.");
+        // template.setId(2);
+        // templates.add(template);
         return templates;
     }
 
